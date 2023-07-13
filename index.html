@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of the Day</title>
+</head>
+<body>
+    <div id="quoteContainer"></div>
+
+    <script>
+        // Define an array of goals
+        var goals = [
+        "The best revenge is massive success. - Frank Sinatra",
+    "Success is not just about making money. It's about making a difference. - Unknown",
+    "The only place where success comes before work is in the dictionary. - Vidal Sassoon",
+    "Opportunities don't happen. You create them. - Chris Grosser",
+    "The starting point of all achievement is desire. - Napoleon Hill",
+    "Success is not the absence of failure; it's the persistence through failure. - Aisha Tyler",
+    "Your time is limited, don't waste it living someone else's life. - Steve Jobs",
+    "If you can dream it, you can achieve it. - Zig Ziglar",
+    "The only way to predict the future is to create it. - Peter Drucker",
+    "The only thing worse than starting something and failing... is not starting something. - Seth Godin",
+    "You don't have to see the whole staircase, just take the first step. - Martin Luther King Jr.",
+    "The future depends on what you do today. - Mahatma Gandhi",
+    "Your work is going to fill a large part of your life, and the only way to be truly satisfied is to do what you believe is great work. - Steve Jobs",
+    "Aim for the moon. If you miss, you may hit a star. - W. Clement Stone",
+    "Success is not the absence of problems; it's the ability to deal with them. - Steve Maraboli",
+    "Don't watch the clock; do what it does. Keep going. - Sam Levenson",
+    "You miss 100% of the shots you don't take. - Wayne Gretzky",
+    "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+    "The only person you should try to be better than is the person you were yesterday. - Unknown",
+    "Challenges are what make life interesting and overcoming them is what makes life meaningful. - Joshua J. Marine",
+    "I can't change the direction of the wind, but I can adjust my sails to always reach my destination. - Jimmy Dean",
+    "Success usually comes to those who are too busy to be looking for it. - Henry David Thoreau",
+    "The biggest adventure you can take is to live the life of your dreams. - Oprah Winfrey",
+    "You miss 100% of the shots you don't take. - Wayne Gretzky",
+    "Don't be afraid to give up the good to go for the great. - John D. Rockefeller",
+    "The only way to do great work is to love what you do. - Steve Jobs",
+    "Don't be pushed around by the fears in your mind. Be led by the dreams in your heart. - Roy T. Bennett",
+    "Success is not in what you have, but who you are. - Bo Bennett",
+    "The harder you work for something, the greater you'll feel when you achieve it. - Unknown",
+    "The future starts today, not tomorrow. - Pope John Paul II",
+    "You are never too old to set another goal or to dream a new dream. - Les Brown",
+    "You don't have to be great to start, but you have to start to be great. - Zig Ziglar",
+    "The secret to success is to know something nobody else knows. - Aristotle Onassis",
+    "The only limit to our realization of tomorrow will be our doubts of today. - Franklin D. Roosevelt",
+    "The only thing standing between you and your goal is the story you keep telling yourself as to why you can't achieve it. - Jordan Belfort",
+    "If you want to achieve greatness, stop asking for permission. - Anonymous",
+    "Success is walking from failure to failure with no loss of enthusiasm. - Winston Churchill",
+    "It does not matter how slowly you go as long as you do not stop. - Confucius",
+    "The road to success and the road to failure are almost exactly the same. - Colin R. Davis",
+    "Don't let yesterday take up too much of today. - Will Rogers",
+    "You have to be odd to be number one. - Dr. Seuss"
+            // Add more goals as needed
+        ];
+
+        // Get the current date
+        var currentDate = new Date();
+
+        // Get the day of the month (1-31)
+        var day = currentDate.getDate();
+
+        // Calculate the index based on the day of the month
+        var index = (day - 1) % goals.length;
+
+        // Get the goal for the current day
+        var currentGoal = goals[index];
+
+        // Get the quote container element
+        var quoteContainer = document.getElementById("quoteContainer");
+
+        // Create a new paragraph element to display the goal
+        var goalElement = document.createElement("p");
+        goalElement.textContent = currentGoal;
+
+        // Append the goal element to the quote container
+        quoteContainer.appendChild(goalElement);
+    </script>
+</body>
+</html>
